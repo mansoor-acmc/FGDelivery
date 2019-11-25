@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://tempuri.org/" elementFormDefault="qualified" targetNamespace="http://tempuri.org/" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+  <xs:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+  <xs:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
+  <xs:element name="FindSalesOrder">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindSalesOrderResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="FindSalesOrderResult" nillable="true" type="q1:SalesTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPickingList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="FindPickingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q2="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="FindPickingListResult" nillable="true" type="q2:SalesTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePallets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="configId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q3="http://schemas.microsoft.com/2003/10/Serialization/Arrays" minOccurs="0" name="pallets" nillable="true" type="q3:ArrayOfstring" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ValidatePalletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q4="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="ValidatePalletsResult" nillable="true" type="q4:ArrayOfSalesLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPalletAvailable">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="configId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pallet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="dtSave" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPalletAvailableResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q5="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="CheckPalletAvailableResult" nillable="true" type="q5:SalesLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPalletAvailableMulti">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="salesId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="configId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element xmlns:q6="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="pallets" nillable="true" type="q6:ArrayOfPalletItemContract" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="lineRecId" type="xs:long" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CheckPalletAvailableMultiResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q7="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="CheckPalletAvailableMultiResult" nillable="true" type="q7:ArrayOfSalesLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnreservePallet">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pallet" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="UnreservePalletResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="UnreservePalletResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestPallets">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="itemId" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetLatestPalletsResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q8="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="GetLatestPalletsResult" nillable="true" type="q8:ArrayOfSalesLine" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePickingLoad">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="pickingId" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="startLoad" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="stopLoad" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SavePickingLoadResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomersDeliveryByQty">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomersDeliveryByQtyResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q9="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="CustomersDeliveryByQtyResult" nillable="true" type="q9:ArrayOfCustomerDeliveryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomersDeliveryByTrucks">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="startDate" type="xs:dateTime" />
+        <xs:element minOccurs="0" name="endDate" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="CustomersDeliveryByTrucksResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q10="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="CustomersDeliveryByTrucksResult" nillable="true" type="q10:ArrayOfCustomerDeliveryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPing">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetPingResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="GetPingResult" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceivePickingList">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="ReceivePickingListResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q11="http://schemas.datacontract.org/2004/07/SyncServices" minOccurs="0" name="ReceivePickingListResult" nillable="true" type="q11:SalesTable" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLoginHistory">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="userName" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="device" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="deviceIp" nillable="true" type="xs:string" />
+        <xs:element minOccurs="0" name="projectName" nillable="true" type="xs:string" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="SaveLoginHistoryResponse">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFGLines">
+    <xs:complexType>
+      <xs:sequence />
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetFGLinesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q12="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="GetFGLinesResult" nillable="true" type="q12:ArrayOfFGLineContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveries">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element minOccurs="0" name="dateSearch" type="xs:dateTime" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="GetDeliveriesResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element xmlns:q13="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="GetDeliveriesResult" nillable="true" type="q13:ArrayOfFGDeliveryContract" />
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>

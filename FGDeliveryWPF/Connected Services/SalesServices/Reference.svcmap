@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ebabbc46-0363-42c2-b933-bb90870d8624" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+  <ClientOptions>
+    <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
+    <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
+    <EnableDataBinding>true</EnableDataBinding>
+    <ExcludedTypes />
+    <ImportXmlTypes>false</ImportXmlTypes>
+    <GenerateInternalTypes>false</GenerateInternalTypes>
+    <GenerateMessageContracts>false</GenerateMessageContracts>
+    <NamespaceMappings />
+    <CollectionMappings />
+    <GenerateSerializableTypes>true</GenerateSerializableTypes>
+    <Serializer>Auto</Serializer>
+    <UseSerializerForFaults>true</UseSerializerForFaults>
+    <ReferenceAllAssemblies>true</ReferenceAllAssemblies>
+    <ReferencedAssemblies />
+    <ReferencedDataContractTypes />
+    <ServiceContractMappings />
+  </ClientOptions>
+  <MetadataSources>
+    <MetadataSource Address="http://172.17.0.50/SyncServicesTest184/SalesService.svc" Protocol="http" SourceId="1" />
+  </MetadataSources>
+  <Metadata>
+    <MetadataFile FileName="SalesService.disco" MetadataType="Disco" ID="79bb7226-c0b8-4759-84c9-d73c30af4fe4" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?disco" />
+    <MetadataFile FileName="SalesService.xsd" MetadataType="Schema" ID="5467cb2e-bfb2-44c3-a6d8-b8722485d7d5" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd4" />
+    <MetadataFile FileName="SalesService1.xsd" MetadataType="Schema" ID="c4d0296e-686d-47ea-a0fa-b8c2bb46e8c6" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd1" />
+    <MetadataFile FileName="SalesService.wsdl" MetadataType="Wsdl" ID="c58c1265-3a90-4778-ba9b-5310395c5a88" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?wsdl" />
+    <MetadataFile FileName="SalesService2.xsd" MetadataType="Schema" ID="4ec27c24-c063-41a6-ac42-2c3d67a469be" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd3" />
+    <MetadataFile FileName="SalesService3.xsd" MetadataType="Schema" ID="1651f6f1-828a-448c-add8-0ea08c90ca1e" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd6" />
+    <MetadataFile FileName="SalesService4.xsd" MetadataType="Schema" ID="1d7e82cb-369a-451b-86f3-ffc8d0b99b85" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd0" />
+    <MetadataFile FileName="SalesService5.xsd" MetadataType="Schema" ID="908dfc57-d118-408d-9ccc-3b0adb86eae8" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd2" />
+    <MetadataFile FileName="SalesService6.xsd" MetadataType="Schema" ID="d0dd0296-aec2-4c9c-8049-da8dcd19c0ff" SourceId="1" SourceUrl="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd5" />
+  </Metadata>
+  <Extensions>
+    <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />
+    <ExtensionFile FileName="configuration.svcinfo" Name="configuration.svcinfo" />
+  </Extensions>
+</ReferenceGroup>

@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://tempuri.org/" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsx="http://schemas.xmlsoap.org/ws/2004/09/mex" xmlns:wsp="http://schemas.xmlsoap.org/ws/2004/09/policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="SalesService" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://tempuri.org/Imports">
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd0" namespace="http://tempuri.org/" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd1" namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd2" namespace="http://schemas.datacontract.org/2004/07/SyncServices" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd4" namespace="http://schemas.datacontract.org/2004/07/System.ComponentModel" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd5" namespace="http://schemas.datacontract.org/2004/07/System" />
+      <xsd:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd6" namespace="http://schemas.microsoft.com/2003/10/Serialization/Arrays" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ISalesService_FindSalesOrder_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindSalesOrder" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_FindSalesOrder_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindSalesOrderResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_FindPickingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:FindPickingList" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_FindPickingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:FindPickingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_ValidatePallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePallets" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_ValidatePallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ValidatePalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CheckPalletAvailable_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPalletAvailable" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CheckPalletAvailable_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPalletAvailableResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CheckPalletAvailableMulti_InputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPalletAvailableMulti" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CheckPalletAvailableMulti_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CheckPalletAvailableMultiResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_UnreservePallet_InputMessage">
+    <wsdl:part name="parameters" element="tns:UnreservePallet" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_UnreservePallet_OutputMessage">
+    <wsdl:part name="parameters" element="tns:UnreservePalletResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetLatestPallets_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestPallets" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetLatestPallets_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetLatestPalletsResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_SavePickingLoad_InputMessage">
+    <wsdl:part name="parameters" element="tns:SavePickingLoad" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_SavePickingLoad_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SavePickingLoadResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CustomersDeliveryByQty_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomersDeliveryByQty" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CustomersDeliveryByQty_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomersDeliveryByQtyResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CustomersDeliveryByTrucks_InputMessage">
+    <wsdl:part name="parameters" element="tns:CustomersDeliveryByTrucks" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_CustomersDeliveryByTrucks_OutputMessage">
+    <wsdl:part name="parameters" element="tns:CustomersDeliveryByTrucksResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetPing_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetPing" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetPing_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetPingResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_ReceivePickingList_InputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivePickingList" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_ReceivePickingList_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ReceivePickingListResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_SaveLoginHistory_InputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoginHistory" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_SaveLoginHistory_OutputMessage">
+    <wsdl:part name="parameters" element="tns:SaveLoginHistoryResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetFGLines_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGLines" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetFGLines_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetFGLinesResponse" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetDeliveries_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveries" />
+  </wsdl:message>
+  <wsdl:message name="ISalesService_GetDeliveries_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDeliveriesResponse" />
+  </wsdl:message>
+  <wsdl:portType name="ISalesService">
+    <wsdl:operation name="FindSalesOrder">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/FindSalesOrder" message="tns:ISalesService_FindSalesOrder_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/FindSalesOrderResponse" message="tns:ISalesService_FindSalesOrder_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="FindPickingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/FindPickingList" message="tns:ISalesService_FindPickingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/FindPickingListResponse" message="tns:ISalesService_FindPickingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/ValidatePallets" message="tns:ISalesService_ValidatePallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/ValidatePalletsResponse" message="tns:ISalesService_ValidatePallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailable">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/CheckPalletAvailable" message="tns:ISalesService_CheckPalletAvailable_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/CheckPalletAvailableResponse" message="tns:ISalesService_CheckPalletAvailable_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailableMulti">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/CheckPalletAvailableMulti" message="tns:ISalesService_CheckPalletAvailableMulti_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/CheckPalletAvailableMultiResponse" message="tns:ISalesService_CheckPalletAvailableMulti_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="UnreservePallet">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/UnreservePallet" message="tns:ISalesService_UnreservePallet_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/UnreservePalletResponse" message="tns:ISalesService_UnreservePallet_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestPallets">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/GetLatestPallets" message="tns:ISalesService_GetLatestPallets_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/GetLatestPalletsResponse" message="tns:ISalesService_GetLatestPallets_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SavePickingLoad">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/SavePickingLoad" message="tns:ISalesService_SavePickingLoad_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/SavePickingLoadResponse" message="tns:ISalesService_SavePickingLoad_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByQty">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/CustomersDeliveryByQty" message="tns:ISalesService_CustomersDeliveryByQty_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/CustomersDeliveryByQtyResponse" message="tns:ISalesService_CustomersDeliveryByQty_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByTrucks">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/CustomersDeliveryByTrucks" message="tns:ISalesService_CustomersDeliveryByTrucks_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/CustomersDeliveryByTrucksResponse" message="tns:ISalesService_CustomersDeliveryByTrucks_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/GetPing" message="tns:ISalesService_GetPing_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/GetPingResponse" message="tns:ISalesService_GetPing_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePickingList">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/ReceivePickingList" message="tns:ISalesService_ReceivePickingList_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/ReceivePickingListResponse" message="tns:ISalesService_ReceivePickingList_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoginHistory">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/SaveLoginHistory" message="tns:ISalesService_SaveLoginHistory_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/SaveLoginHistoryResponse" message="tns:ISalesService_SaveLoginHistory_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetFGLines">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/GetFGLines" message="tns:ISalesService_GetFGLines_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/GetFGLinesResponse" message="tns:ISalesService_GetFGLines_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <wsdl:input wsaw:Action="http://tempuri.org/ISalesService/GetDeliveries" message="tns:ISalesService_GetDeliveries_InputMessage" />
+      <wsdl:output wsaw:Action="http://tempuri.org/ISalesService/GetDeliveriesResponse" message="tns:ISalesService_GetDeliveries_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_ISalesService" type="tns:ISalesService">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="FindSalesOrder">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/FindSalesOrder" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="FindPickingList">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/FindPickingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ValidatePallets">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/ValidatePallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailable">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/CheckPalletAvailable" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CheckPalletAvailableMulti">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/CheckPalletAvailableMulti" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="UnreservePallet">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/UnreservePallet" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetLatestPallets">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/GetLatestPallets" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SavePickingLoad">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/SavePickingLoad" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByQty">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/CustomersDeliveryByQty" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="CustomersDeliveryByTrucks">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/CustomersDeliveryByTrucks" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPing">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/GetPing" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="ReceivePickingList">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/ReceivePickingList" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveLoginHistory">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/SaveLoginHistory" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetFGLines">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/GetFGLines" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDeliveries">
+      <soap:operation soapAction="http://tempuri.org/ISalesService/GetDeliveries" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="SalesService">
+    <wsdl:port name="BasicHttpBinding_ISalesService" binding="tns:BasicHttpBinding_ISalesService">
+      <soap:address location="http://172.17.0.50/SyncServicesTest184/SalesService.svc" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

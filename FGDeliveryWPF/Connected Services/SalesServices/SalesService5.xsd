@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://schemas.datacontract.org/2004/07/SyncServices" elementFormDefault="qualified" targetNamespace="http://schemas.datacontract.org/2004/07/SyncServices" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import schemaLocation="http://172.17.0.50/SyncServicesTest184/SalesService.svc?xsd=xsd3" namespace="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" />
+  <xs:complexType name="SalesTable">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="DeliveryDate" nillable="true" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="DeliveryMode" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DeliveryName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="DriverName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="HalfPallet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Lines" nillable="true" type="tns:ArrayOfSalesLine" />
+      <xs:element minOccurs="0" name="PickSameDimension" type="xs:boolean" />
+      <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesName" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="StartLoading" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="StopLoading" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="TruckPlate" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalesTable" nillable="true" type="tns:SalesTable" />
+  <xs:complexType name="ArrayOfSalesLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="SalesLine" nillable="true" type="tns:SalesLine" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="ArrayOfSalesLine" nillable="true" type="tns:ArrayOfSalesLine" />
+  <xs:complexType name="SalesLine">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="Color" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="ExclusiveHalfPallet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="Grade" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="IsHalfPallet" type="xs:boolean" />
+      <xs:element minOccurs="0" name="ItemId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="LineRecId" type="xs:long" />
+      <xs:element minOccurs="0" name="Location" nillable="true" type="xs:string" />
+      <xs:element xmlns:q1="http://schemas.datacontract.org/2004/07/SyncServices.SalesOrderAX" minOccurs="0" name="Locations" nillable="true" type="q1:ArrayOfInventByGrLocContract" />
+      <xs:element minOccurs="0" name="Name" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="PickingId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Remarks" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesId" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SalesQty" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesQtyBox" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesQtyPallet" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesQtySQM" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesQtySQMRemaining" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesQtySQMReserved" nillable="true" type="xs:decimal" />
+      <xs:element minOccurs="0" name="SalesUnit" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="SerialNumber" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Site" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="Size" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdateType" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedBy" nillable="true" type="xs:string" />
+      <xs:element minOccurs="0" name="UpdatedDate" type="xs:dateTime" />
+      <xs:element minOccurs="0" name="Warehouse" nillable="true" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="SalesLine" nillable="true" type="tns:SalesLine" />
+</xs:schema>

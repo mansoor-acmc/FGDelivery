@@ -1,0 +1,60 @@
+﻿<Application x:Class="FGDeliveryWPF.App"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:local="clr-namespace:FGDeliveryWPF"
+             StartupUri="MainWindow.xaml">
+    <Application.Resources>
+
+        <LinearGradientBrush x:Key="BrushColGateHeader" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFCE5E5" Offset="0"/>
+            <GradientStop Color="#FF9FD491" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="BrushColHeader" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFFCE5E5" Offset="0"/>
+            <GradientStop Color="#FFD49191" Offset="1"/>
+        </LinearGradientBrush>
+        <LinearGradientBrush x:Key="CellStyle" EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFD7D7D7" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+
+        <Style x:Key="HeaderGate" TargetType="{x:Type Label}">            
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontFamily" Value="Arial Black"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="HorizontalContentAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="BorderThickness" Value="0,0,1,0"/>
+            <Setter Property="BorderBrush" Value="Black"/>
+            <Setter Property="Background" Value="{DynamicResource BrushColGateHeader}"/>
+        </Style>
+        
+        <Style x:Key="ColHeader" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="NoWrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="FontSize" Value="30"/>
+            <Setter Property="TextAlignment" Value="Center"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="Background" Value="{DynamicResource BrushColHeader}"/>
+        </Style>
+        <Style x:Key="CellBlock" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="16"/>
+            <Setter Property="Background" Value="{DynamicResource CellStyle}"/>
+        </Style>
+        <Style x:Key="CellFirst" TargetType="{x:Type TextBlock}">
+            <Setter Property="TextWrapping" Value="Wrap"/>
+            <Setter Property="TextTrimming" Value="None"/>
+            <Setter Property="Padding" Value="5"/>
+            <Setter Property="FontSize" Value="18"/>
+            <Setter Property="Foreground" Value="OrangeRed"/>
+            <Setter Property="FontWeight" Value="Bold"/>
+            <Setter Property="Background" Value="{DynamicResource CellStyle}"/>
+        </Style>
+        
+
+    </Application.Resources>
+</Application>
